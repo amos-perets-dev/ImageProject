@@ -49,12 +49,10 @@ public class ImageManagerImpl extends BaseManager implements IImageManager {
     @Override
     public void load() {
         Integer index = this.imageRepo.getIndex();
-        Log.d("TEST_GAME", "ImageManagerImpl index: " + index);
         loadImage(imagesUrls.get(index), imageApi);
     }
 
     public void loadImage(String suffixUrl, ImageApi imageApi) {
-        Log.d("TEST_GAME", "ImageManagerImpl load: " + suffixUrl);
         compositeDisposable.add(
                 imageApi
                         .getImage(suffixUrl)

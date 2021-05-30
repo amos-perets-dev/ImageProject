@@ -27,7 +27,6 @@ public class NetworkConnectivityHelper implements INetworkConnectivityHelper {
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Log.d("TEST_GAME", "NetworkConnectivityHelper broadcastReceiver onReceive");
 
             if (isConnected != getConnectivityStatus()) {
                 isConnected = !isConnected;

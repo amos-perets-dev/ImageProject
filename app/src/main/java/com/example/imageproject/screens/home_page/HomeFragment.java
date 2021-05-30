@@ -125,7 +125,6 @@ public class HomeFragment extends DaggerFragment {
     }
 
     private void showError(Integer errorId) {
-        Log.d("TEST_GAME", "HomeFragment showError");
 
         String errorText = getString(errorId);
         Snackbar.make(requireView(), errorText, Snackbar.LENGTH_LONG).show();
